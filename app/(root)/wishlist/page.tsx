@@ -1,5 +1,5 @@
 "use client"
-import { use, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import Loader from "@/components/Loader"
 import ProductCard from "@/components/ProductCard"
 import { getProductDetails } from "@/lib/actions/actions"
@@ -15,7 +15,7 @@ const Wishlist = () => {
 
   const getUser = async () => {
     try {
-      const res = await fetch("/api/users")
+      const res = await fetch("https://store-app-pagina.vercel.app/api/users")
       const data = await res.json()
       setSignedInUser(data)
       setLoading(false)
