@@ -21,7 +21,7 @@ const HeartFavorite = ({ product, updateSignedInUser }: HeartFavoriteProps) => {
   const getUser = async () => {
     try {
       setLoading(true);
-      const res = await fetch("https://store-app-pagina.vercel.app/api/users");
+      const res = await fetch("/api/users");
       const data = await res.json();
       setIsLiked(data.wishlist.includes(product._id));
       setLoading(false);
