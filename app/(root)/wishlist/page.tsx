@@ -4,6 +4,7 @@ import Loader from "@/components/Loader"
 import ProductCard from "@/components/ProductCard"
 import { getProductDetails } from "@/lib/actions/actions"
 import { useUser } from "@clerk/nextjs"
+export const dynamic = "force-dynamic";
 
 
 const Wishlist = () => {
@@ -15,7 +16,7 @@ const Wishlist = () => {
 
   const getUser = async () => {
     try {
-      const res = await fetch("https://store-app-pagina.vercel.app/api/users")
+      const res = await fetch("/api/users")
       const data = await res.json()
       setSignedInUser(data)
       setLoading(false)
@@ -71,6 +72,6 @@ const Wishlist = () => {
   )
 }
 
-export const dynamic = "force-dynamic";
+
 
 export default Wishlist
