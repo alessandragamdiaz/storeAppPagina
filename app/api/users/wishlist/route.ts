@@ -4,6 +4,7 @@ import { connectToDB } from "@/lib/mongoDB";
 import { auth } from '@clerk/nextjs/server';
 import { revalidatePath } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
+export const dynamic = "force-dynamic";
 
 export const POST = async (req: NextRequest) => {
   try {
@@ -45,5 +46,5 @@ export const POST = async (req: NextRequest) => {
     return new NextResponse("Internal Server Error", { status: 500 });
   }
 }
-export const dynamic = "force-dynamic";
+
 
