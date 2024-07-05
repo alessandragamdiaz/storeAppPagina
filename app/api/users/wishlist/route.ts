@@ -40,14 +40,7 @@ export const POST = async (req: NextRequest) => {
 
     await user.save()
     
-      return NextResponse.json(user, { 
-      status: 200,  headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET",
-        "Access-Control-Allow-Headers": "Content-Type",
-      },
-                                   
-        });
+      return NextResponse.json(user, { status: 200 })
   } catch (err) {
     console.log("[wishlist_POST]", err);
     return new NextResponse("Internal Server Error", { status: 500 });
