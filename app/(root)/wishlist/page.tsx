@@ -16,7 +16,7 @@ const Wishlist = () => {
 
   const getUser = async () => {
     try {
-      const res = await fetch("/api/users")
+      const res = await fetch("http://localhost:3000/api/users")
       const data = await res.json()
       setSignedInUser(data)
       setLoading(false)
@@ -58,9 +58,9 @@ const Wishlist = () => {
 
   return loading ? <Loader /> : (
     <div className="px-10 py-5">
-      <p className="text-heading3-bold my-10">Your Wishlist</p>
+      <p className="text-heading3-bold my-10">Favoritos</p>
       {wishlist.length === 0 && (
-        <p>No items in your wishlist</p>
+        <p>No tienes Favoritos</p>
       )}
 
       <div className="flex flex-wrap justify-center gap-16">

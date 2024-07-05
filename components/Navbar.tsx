@@ -34,7 +34,7 @@ const Navbar = () => {
             pathname === "/" && "text-red-1"
           }`}
         >
-          Home
+         INICO
         </Link>
         <Link
           href={user ? "/wishlist" : "/sign-in"}
@@ -42,7 +42,7 @@ const Navbar = () => {
             pathname === "/wishlist" && "text-red-1"
           }`}
         >
-          Wishlist
+         FAVORITOS
         </Link>
         <Link
           href={user ? "/orders" : "/sign-in"}
@@ -50,8 +50,17 @@ const Navbar = () => {
             pathname === "/orders" && "text-red-1"
           }`}
         >
-          Orders
+         ORDENES
         </Link> 
+
+         <Link
+          href={user ? "/productsgeneral" : "/sign-in"}
+          className={`hover:text-red-1 ${
+            pathname === "/productsgeneral" && "text-red-1"
+          }`}
+        >
+         PRODUCTOS
+        </Link>
       </div>
       <div className="flex gap-3 border border-grey-2 px-3 py-1 items-center rounded-lg">
   <input
@@ -85,14 +94,22 @@ const Navbar = () => {
     <div className="absolute top-12 right-5 flex flex-col gap-4 p-3 rounded-lg  border bg-white text-base-bold lg:hidden
 ">
               <Link href="/" className="hover:text-red-1">
-      Home
+     INICO
       </Link>
        <Link href={user ? "/wishlist" : "/sign-in"}  className="hover:text-red-1">
-      wishlist
+   FAVORITOS
       </Link>
        <Link href={user ? "/orders" : "/sign-in"}  className="hover:text-red-1">
-      Orders
+    ORDENES
       </Link> 
+       <Link
+          href={user ? "/productsgeneral" : "/sign-in"}
+          className={`hover:text-red-1 ${
+            pathname === "/productsgeneral" && "text-red-1"
+          }`}
+        >
+         PRODUCTOS
+        </Link>
        <Link
           href="/cart"
           className="flex items-center gap-3 border rounded-lg px-2 py-1 hover:bg-black hover:text-white"

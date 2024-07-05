@@ -44,7 +44,7 @@ const HeartFavorite = ({ product, updateSignedInUser }: HeartFavoriteProps) => {
         router.push("/sign-in");
         return;
       } else {
-        const res = await fetch("/api/users/wishlist", {
+        const res = await fetch("http://localhost:3000/api/users/wishlist", {
           method: "POST",
           body: JSON.stringify({ productId: product._id }),
         });
@@ -65,3 +65,4 @@ const HeartFavorite = ({ product, updateSignedInUser }: HeartFavoriteProps) => {
 };
 
 export default HeartFavorite;
+

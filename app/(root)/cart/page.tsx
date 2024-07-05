@@ -49,11 +49,11 @@ const Cart = () => {
 
       {/* max-lg w-full es para rellenar  el esapacio de columna apra que sea igual que arriba  */}
       <div className="w-2/3 max-lg:w-full">
-        <p className="text-heading3-bold">Shopping Cart</p>
+        <p className="text-heading3-bold">Tienda Carrito</p>
         <hr className="my-6" />
 
         {cart.cartItems.length === 0 ? (
-          <p className="text-body-bold">No item in cart</p>
+          <p className="text-body-bold">No hay Productos</p>
         ) : (
           <div>
             {cart.cartItems.map((cartItem) => (
@@ -104,20 +104,20 @@ const Cart = () => {
 
       <div className="w-1/3 max-lg:w-full flex flex-col gap-8 bg-grey-1 rounded-lg px-4 py-5">
         <p className="text-heading4-bold pb-4">
-          Summary{" "}
+          Resumen{" "}
           <span>{`(${cart.cartItems.length} ${
             cart.cartItems.length > 1 ? "items" : "item"
           })`}</span>
         </p>
         <div className="flex justify-between text-body-semibold">
-          <span>Total Amount</span>
-          <span>$ {totalRounded}</span>
+          <span>Monto Total </span>
+          <span>SOLES. {totalRounded}</span>
         </div>
         <button
           className="border rounded-lg text-body-bold bg-white py-3 w-full hover:bg-black hover:text-white"
           onClick={handleCheckout}
         >
-          Proceed to Checkout
+         PAGAR
         </button>
       </div>
     </div>
