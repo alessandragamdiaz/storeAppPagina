@@ -65,7 +65,7 @@ const Navbar = () => {
       <div className="flex gap-3 border border-grey-2 px-3 py-1 items-center rounded-lg">
   <input
           className="outline-none max-sm:max-w-[120px]"
-          placeholder="Search..."
+          placeholder="Buscador..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
